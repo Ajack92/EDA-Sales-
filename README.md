@@ -1,11 +1,13 @@
 # EDA-Sales using SQL 
 
-#SQL Exploratory Data Analysis (EDA) Project 
+#SQL Exploratory Data Analysis (EDA) Project .
 
 EDA is all about understanding the data using basic queries,aggregations and data profiling.
 
 The Main objective of this Deep dive into raw sales data and pull insights using diamensions and measures and vice versa, of the data using tool SQL.
 
+
+Below are the Business questions and their queries.
 
 ---explore all objects in te DB
 select * from INFORMATION_SCHEMA.tables
