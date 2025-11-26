@@ -9,10 +9,12 @@ The Main objective of this Deep dive into raw sales data and pull insights using
 ##Below are the Business questions and their queries.
 
 
-###1 explore all objects in te DB
+###1 explore all objects in the DB
+
+```sql
 select * 
 from INFORMATION_SCHEMA.tables
-
+```
 
 ###2 Explore all columns in the DB
 select * from INFORMATION_SCHEMA.COLUMNS
