@@ -9,46 +9,56 @@ The Main objective of this Deep dive into raw sales data and pull insights using
 ##Below are the Business questions and their queries.
 
 
-###1 explore all objects in the DB
+### 1. Explore all objects in the DB
 
 ```sql
 select * 
 from INFORMATION_SCHEMA.tables
 ```
 
-###2 Explore all columns in the DB
+### 2. Explore all columns in the DB
+```sql
 select * from INFORMATION_SCHEMA.COLUMNS
 where table_name = 'gold.dim_customers'
+```
 
-###3 Explore all countries
+### 3. Explore all countries.
+
+```sql
 select distinct country
-from [gold.dim_customers]
+from [gold.dim_customers].
+```
 
-###4 Explore all categories 'the major divsions'
+### 4. Explore all categories 'the major divsions'.
+```sql
 select distinct product_name, 
 category,
 subcategory
 from [gold.dim_products]
 order by 1,2,3
+```
 
-###5 Date exploration (first and last date)
+### 5. Date exploration (first and last date)
 
+```sq
 select min(order_date) as first_order_date,
 max(order_date) as last_order_date,
 datediff(year,min(order_date) ,max(order_date)) as order_range_year,
 datediff(month,min(order_date) ,max(order_date)) as order_range_month,
 datediff(day,min(order_date) ,max(order_date)) as order_range_days
 from [gold.fact_sales]
+```
 
-###6 find youngest and oldest customer
+### 6. find youngest and oldest customer
 
+```sql
 select
 min(birthdate) as oldest_customer,
 datediff(year,min(birthdate),getdate()) as oldest_age,
 max(birthdate) as youngest_customer,
 datediff(year,max(birthdate),getdate()) as youngest_age
 from [gold.dim_customers]
-
+```
 
 
 ### Aggreate using measures.
