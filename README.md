@@ -154,7 +154,7 @@ group by category
 order by 2 DESC
 ```
 
-###18 What is the avergae costs in each category.
+###18. What is the avergae costs in each category.
 
 ```sql
 select 
